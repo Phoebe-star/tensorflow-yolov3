@@ -95,8 +95,12 @@ $ wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 $ wget http://images.cocodataset.org/zips/test2017.zip
 $ wget http://images.cocodataset.org/annotations/image_info_test2017.zip 
 
+数据集里提取有用信息，如边界框，生成.txt文件
 $ python core/extract_coco.py --dataset_info_path ./data/train_data/COCO/train2017.txt
 
+把图像数据集转成.tfrecord，用二进制来保存数据，训练啦。
+$ python core/convert_tfrecord.py --dataset ./data/train_data/COCO/train2017.txt  --tfrecord_path_prefix ./data/train_data/COCO/tfrecords/coco --num_tfrecords 100
+$ python quick_train.py
 ```
 
 ## part 4. Why it is so magical ?
