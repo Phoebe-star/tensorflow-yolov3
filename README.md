@@ -94,6 +94,9 @@ $ wget http://images.cocodataset.org/zips/train2017.zip
 $ wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 $ wget http://images.cocodataset.org/zips/test2017.zip
 $ wget http://images.cocodataset.org/annotations/image_info_test2017.zip 
+
+$ python core/extract_coco.py --dataset_info_path ./data/train_data/COCO/train2017.txt
+
 ```
 
 ## part 4. Why it is so magical ?
